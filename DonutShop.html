@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+		var DonutShop = function(hoursOpen, minCustomers, maxCustomers, avgDonuts, donutsNeededHr) {
+			this.hours = hoursOpen;
+			this.min = minCustomers;
+			this.max = maxCustomers;
+			this.averageDonuts = avgDonuts;
+			rCustomers = Math.ceil(Math.random()*(this.max-this.min)+this.min);
+			nDonutsHr = rCustomers * this.averageDonuts;
+			nDonutsDy= nDonutsHr * this.hours;
+			
+
+			this.donuts = function (){
+				console.log ("This Donut Shop will need " + nDonutsHr +" donuts per hour");
+				console.log ("This Donut Shop will need " + nDonutsDy +" donuts per day");
+			}
+
+		}
+
+		var Downtown = new DonutShop(8, 8, 43, 4.5);
+		Downtown.donuts();
+
+		var CapitolHill = new DonutShop(24, 4, 37, 2);
+		CapitolHill.donuts();
+
+		var SLU = new DonutShop(10, 9, 23, 6.33);
+		SLU.donuts();
+
+		var Wedgewood = new DonutShop(7, 2, 28, 1.25);
+		Wedgewood.donuts();
+
+		var Ballard = new DonutShop(10, 8, 58, 3.75);
+		Ballard.donuts();
+
+
+	
+		</script>
+	</head>
